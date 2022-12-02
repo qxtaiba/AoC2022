@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from multiprocessing import RLock
-
-
 def parse_input(input_file):
     with open(input_file, "r") as f:
         for line in f.readlines():
