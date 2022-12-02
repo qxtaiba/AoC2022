@@ -28,5 +28,3 @@ def part_two():
 
 result_p1 = part_one()    
 result_p2 = part_two()
-
-print(result_p2)
