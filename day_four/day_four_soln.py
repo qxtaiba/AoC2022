@@ -6,10 +6,8 @@ def parse_input(input_file):
     return sections
 
 
-def both_soln():
+def part_one():
     part_one_total = 0 
-    part_two_total = 0 
-
     sections = parse_input('input.txt')
     for pair in sections:
         elf_one, elf_two = pair
@@ -22,11 +20,23 @@ def both_soln():
 
         elif (int(start_two) <= int(start_one) and int(finish_two) >= int(finish_one)):
             part_one_total += 1
+        
+    return total
+
+def part_two():
+    total = 0 
+    sections = parse_input('input.txt')
+    for pair in sections:
+        elf_one, elf_two = pair
+
+        start_one, finish_one = elf_one.split('-')
+        start_two, finish_two = elf_two.split('-')
 
         if (int(start_one) <= int(finish_two) and int(finish_one) >= int(start_two)):
-            part_two_total += 1
+            total += 1
+                  
+    return total
 
-    return part_one_total, part_two_total
 
 result_p1 = part_one()    
 result_p2 = part_two()    
