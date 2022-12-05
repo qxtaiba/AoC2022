@@ -9,7 +9,7 @@ def parse_input(input_file):
     return stacks.splitlines(), instructions.splitlines()
 
 def get_columns(stacks):
-    columns = {stack_no: deque() for stack_no in range(1, len(stacks[-1].replace(' ',''))+1)}
+    columns = {stack_no: deque() for stack_no in range(1, len(stacks)+1)}
 
     for row in stacks[:-1]:
         for index, row_index in enumerate(range(1,len(row),4),1):
@@ -58,4 +58,4 @@ def part_two():
     return get_final_str(columns, '')
     
 result_p1 = part_one()    
-result_p2 = part_two()    
+result_p2 = part_two()  
